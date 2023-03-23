@@ -1,0 +1,6 @@
+Elige una liga:
+<ul>
+    {% for liga in ligas %}
+        <li><a href="{% url 'Liga' liga.id %}">{{ liga.name }}</a></li>
+    {% endfor %}
+</ul>
