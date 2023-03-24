@@ -25,6 +25,9 @@ class Tabla(models.Model):
 class Jugador(models.Model):
     name = models.CharField(max_length=256)
     equipo = models.ForeignKey(Equipo, on_delete=models.CASCADE)
+    edad = models.IntegerField()
+    años_exp = models.IntegerField()
+    posicion = models.CharField(max_length=256)
         
     def __str__(self):
         return self.name

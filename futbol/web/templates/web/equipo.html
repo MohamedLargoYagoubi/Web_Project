@@ -1,3 +1,9 @@
 {{ equipo.name }}
 
-<br /><a href={% url 'Home'  %}>Home</a>
+<br />
+
+<ul>
+    {% for jugador in jugadores %}
+    <li><a href="{% url 'Jugador' jugador.id %}">{{ jugador.name }}</a></li>
+    {% endfor %}
+</ul>

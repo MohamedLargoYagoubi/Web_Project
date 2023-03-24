@@ -20,6 +20,7 @@ import web.views as wv
 urlpatterns = [
     path("", wv.home),
     path("liga/<int:liga_id>/", wv.liga, name = 'Liga'),
-    path("equipo/<int:pk>", wv.EquipoView.as_view(), name = 'Equipo'),
+    path("equipo/<int:equipo_id>/", wv.equipo, name = 'Equipo'),
+    path("jugador/<int:jugador_id>/", wv.jugador, name = 'Jugador'),
     path("admin/", admin.site.urls),
 ]

@@ -4,6 +4,6 @@
 
 <ul>
     {% for equipo in equipos %}
-    <li>{{ equipo.name }}</li>
+    <li><a href="{% url 'Equipo' equipo.id %}">{{ equipo.name }}</a></li>
     {% endfor %}
 </ul>
