@@ -1,9 +1,11 @@
-{{ equipo.name }}
+{% extends 'web/nav_bar.html' %}
 
-<br />
+{% block content %}
+<h3>{{ equipo.name }}</h3>
 
 <ul>
     {% for jugador in jugadores %}
-    <li><a href="{% url 'Jugador' jugador.id %}">{{ jugador.name }}</a></li>
+    <li class="elem"><a href="{% url 'Jugador' jugador.id %}">{{ jugador.name }}</a></li>
     {% endfor %}
 </ul>
+{% endblock %}

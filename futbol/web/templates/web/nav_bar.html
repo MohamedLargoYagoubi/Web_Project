@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>Selector de LLiga</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+</head>
+
+<body>
+    <header>
+        <nav class="navegador">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="back">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>

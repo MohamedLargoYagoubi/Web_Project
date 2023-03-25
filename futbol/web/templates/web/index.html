@@ -1,12 +1,10 @@
-Elige una liga:
+{% extends 'web/nav_bar.html' %}
+
+{% block content %}
+<h2>Elige una liga:</h2>
 <ul>
     {% for liga in ligas %}
-        <li><a href="{% url 'Liga' liga.id %}">{{ liga.name }}</a></li>
+        <li class="elem"><a href="{% url 'Liga' liga.id %}">{{ liga.name }}</a></li>
     {% endfor %}
 </ul>
-
-{% if user.is_authenticated %}
-<a href="{% url 'logout' %}">Logout</a>
-{% else %}
-<a href="{% url 'login' %}">Login</a>
-{% endif %}
+{% endblock %}

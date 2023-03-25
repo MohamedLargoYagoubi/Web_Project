@@ -38,3 +38,6 @@ def jugador(request, jugador_id):
     except Equipo.DoesNotExist:
         raise Http404("Este Jugador no existe")
     return render(request, "web/jugador.html", {"jugador": jugador})
+
+def nav_bar(request):
+    return render(request, "web/nav_bar.html", {})

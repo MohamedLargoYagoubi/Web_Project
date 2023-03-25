@@ -1,9 +1,13 @@
-<h1>Datos de jugador</h1>
+{% extends 'web/nav_bar.html' %}
 
-<h2>{{ jugador.name }}</h2>
+{% block content %}
+<h2>Datos de jugador</h2>
+
+<h3>{{ jugador.name }}</h3>
 
 <ul>
     <li>Edad: {{ jugador.edad }} </li> 
     <li>Posicion: {{ jugador.posicion }} </li>
     <li>Años de experiencia: {{ jugador.años_exp }} </li>
 </ul>
+{% endblock %}

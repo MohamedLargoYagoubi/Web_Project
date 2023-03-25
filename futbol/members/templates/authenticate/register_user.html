@@ -1,11 +1,13 @@
+{% extends 'web/nav_bar.html' %}
+
+{% block content %}
 {% if form.errors %}
 <p>There was an error with your register</p>
 {% endif %}
 
-<h1>Register</h1>
-<br/>
+<h2>Register</h2>
 
-<form action="{% url 'register' %}" method=POST>
+<form class="formStyle" action="{% url 'register' %}" method=POST>
     {% csrf_token %}
 
     {{ form.as_p }}
@@ -13,3 +15,4 @@
     <br>
     <input type="submit" value="Submit">
 </form>
+{% endblock %}

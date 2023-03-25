@@ -1,7 +1,9 @@
-<h1>Log in</h1>
-<br/>
+{% extends 'web/nav_bar.html' %}
 
-<form action="" method=POST>
+{% block content %}
+<h2>Log in</h2>
+
+<form class="formStyle" action="" method=POST>
     {% csrf_token %}
     <div>
         <label for="InputUsername1">Username</label>
@@ -15,4 +17,5 @@
     <br>
     <input type="submit" value="Submit">
 </form>
-<a href="{% url 'register' %}">You don't have an account?</a>
+<a class="moveToRegister" href="{% url 'register' %}">You don't have an account?</a>
+{% endblock %}
