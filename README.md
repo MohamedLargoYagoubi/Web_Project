@@ -28,9 +28,16 @@ You will be able to see the leagues, teams and players that have been created. I
 
 **✰ INTRUCTIONS FOR DEPLOYING THE PROJECT IN THE CLOUD WITH FLY.IO ✰** 
 
-⚠️ TODO ⚠️
-
-**✰ GROUP MEMBERS ✰** 
+  1.Install fly.io
+  
+  2.Log in
+  `fly auth login`
+  
+  3. Run the following command lines:
+   ` fly launch
+    fly deploy`
+    
+  **✰ GROUP MEMBERS ✰** 
 - Sergi Fernández Espona
 - Alex Gonzalez Toré
 - Mohamed Largo Yagoubi
