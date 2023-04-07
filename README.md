@@ -30,7 +30,7 @@ You will be able to see the leagues, teams and players that have been created. I
 
   1.Install fly.io
   
-  2.Log in
+  2.Login:
   `fly auth login`
   
   3. Run the following command lines:
