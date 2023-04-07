@@ -10,7 +10,7 @@ You will be able to see the leagues, teams and players that have been created. I
 > Note: You must have [Docker](https://www.docker.com/products/docker-desktop/) installed.
  1. Clone the repository from Github by running the following command in your terminal or command prompt:
 
-    `git clone https://github.com/MohamedLargoYagoubi/Web_Project.git`
+    `git clone https://github.com/MohamedLargoYagoubi/Web_Project`
  2. Navigate to the cloned directory using the `cd` command until you reach the project root directory (until you reach the directory containing the `manage.py` file):
 
     `cd .\Web_Project\futbol\`
