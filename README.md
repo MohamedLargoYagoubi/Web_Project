@@ -31,4 +31,7 @@ You will be able to see the leagues, teams and players that have been created. I
 ⚠️ TODO ⚠️
 
 **✰ GROUP MEMBERS ✰** 
- - Mohamed Largo Yagoubi
+- Sergi Fernández Espona
+- Alex Gonzalez Toré
+- Mohamed Largo Yagoubi
+- Ian Portolés Vilalta
