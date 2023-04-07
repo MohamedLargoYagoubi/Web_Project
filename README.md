@@ -6,7 +6,7 @@
 We are a group of students from the [University of Lleida](http://www.udl.cat/ca/) (UDL) and have developed a soccer website using [Django](http://www.udl.cat/ca/) and other technologies such as [Docker](https://www.docker.com/) or [Fly](https://fly.io/).
 You will be able to see the leagues, teams and players that have been created. In addition, you will have an administrator option to modify, delete or add new elements.
 
-**✰ INTRUCTIONS FOR DEPLOYING THE PROJECT ✰** 
+**✰ INTRUCTIONS FOR DEPLOYING (LOCALLY) THE PROJECT ✰** 
 > Note: You must have [Docker](https://www.docker.com/products/docker-desktop/) installed.
  1. Clone the repository from Github by running the following command in your terminal or command prompt:
 
@@ -26,7 +26,7 @@ You will be able to see the leagues, teams and players that have been created. I
 
     `docker-compose down`
 
-**✰ INTRUCTIONS FOR DEPLOYING THE PROJECT ✰** 
+**✰ INTRUCTIONS FOR DEPLOYING THE PROJECT IN THE CLOUD WITH FLY.IO ✰** 
 
 ⚠️ TODO ⚠️
 
