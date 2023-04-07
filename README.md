@@ -1,6 +1,6 @@
 # **WEB PROJECT: SOCCER SITE**
 
-![](https://drive.google.com/file/d/1zx5n9jFw8rqQ3LBCjnvGVJRcJLxk30ze/view?usp=sharing)
+![banner](https://github.com/MohamedLargoYagoubi/images/blob/main/PROJECT%20WEB.gif)
  **✰ INTRODUCTION ✰**
 
 We are a group of students from the [University of Lleida](http://www.udl.cat/ca/) (UDL) and have developed a soccer website using [Django](http://www.udl.cat/ca/) and other technologies such as [Docker](https://www.docker.com/) or [Fly](https://fly.io/).
