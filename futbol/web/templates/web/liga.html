@@ -8,7 +8,7 @@
     <li class="elem">
         <a href="{% url 'Equipo' equipo.id %}">{{ equipo.name }}</a>
         <a href="{% url 'update_team' equipo.id %}"><button class="update-btn">Update</button></a>
-        <button class="remove-btn">Remove</button>
+        <a href="{% url 'delete_team' equipo.id %}"><button class="delete-btn">Delete</button></a>
     </li>
     {% endfor %}
     {% if user.is_authenticated %}

@@ -7,7 +7,7 @@
         <li class="elem">
             <a href="{% url 'Liga' liga.id %}">{{ liga.name }}</a>
             <a href="{% url 'update_league' liga.id %}"><button class="update-btn">Update</button></a>
-            <button class="remove-btn">Remove</button>
+            <a href="{% url 'delete_league' liga.id %}"><button class="delete-btn">Delete</button></a>
         </li>
     {% endfor %}
     {% if user.is_authenticated %}

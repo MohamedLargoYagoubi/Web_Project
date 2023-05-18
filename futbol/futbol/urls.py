@@ -32,5 +32,7 @@ urlpatterns = [
     path("update_league/<str:pk>/", wv.updateLeague, name="update_league"),
     path("update_team/<str:pk>/", wv.updateTeam, name="update_team"),
     path("update_player/<str:pk>/", wv.updatePlayer, name="update_player"),
-
+    path("delete_league/<str:pk>/", wv.deleteLeague, name="delete_league"),
+    path("delete_team/<str:pk>/", wv.deleteTeam, name="delete_team"),
+    path("delete_player/<str:pk>/", wv.deletePlayer, name="delete_player"),
 ]

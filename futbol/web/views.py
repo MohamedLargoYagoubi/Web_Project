@@ -66,6 +66,14 @@ def updateLeague(request, pk):
     context = {'form':form}
     return render(request, "web/league_form.html", context)
 
+def deleteLeague(request, pk):
+    liga = Liga.objects.get(id = pk)
+    if request.method == 'POST':
+        liga.delete()
+        return redirect('/')
+    context = {'item': liga}
+    return render(request, "web/league_delete.html", context)
+
 def createTeam(request):
     form = TeamForm()
     if request.method == "POST":
@@ -90,6 +98,14 @@ def updateTeam(request, pk):
     context = {'form':form}
     return render(request, "web/team_form.html", context)
 
+def deleteTeam(request, pk):
+    equipo = Equipo.objects.get(id = pk)
+    if request.method == 'POST':
+        equipo.delete()
+        return redirect('/')
+    context = {'item': equipo}
+    return render(request, "web/team_delete.html", context)
+
 def createPlayer(request):
     form = PlayerForm()
     if request.method == "POST":
@@ -112,3 +128,11 @@ def updatePlayer(request, pk):
             return redirect('/')
     context = {'form':form}
     return render(request, "web/player_form.html", context)
+
+def deletePlayer(request, pk):
+    jugador = Jugador.objects.get(id = pk)
+    if request.method == 'POST':
+        jugador.delete()
+        return redirect('/')
+    context = {'item': jugador}
+    return render(request, "web/player_delete.html", context)

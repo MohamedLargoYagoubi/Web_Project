@@ -5,7 +5,11 @@
 
 <ul>
     {% for jugador in jugadores %}
-    <li class="elem"><a href="{% url 'Jugador' jugador.id %}">{{ jugador.name }}</a></li>
+    <li class="elem">
+        <a href="{% url 'Jugador' jugador.id %}">{{ jugador.name }}</a>
+        <a href="{% url 'update_player' jugador.id %}"><button class="update-btn">Update</button></a>
+        <a href="{% url 'delete_player' jugador.id %}"><button class="delete-btn">Delete</button></a>
+    </li>
     {% endfor %}
     {% if user.is_authenticated %}
         <a href="{% url 'create_player' %}"><button class="add-btn">Add NEW element</button></a>

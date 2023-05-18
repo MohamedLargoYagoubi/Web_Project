@@ -2,7 +2,7 @@
 
 {% block content %}
 <p>Are you sure to delete "{{item}}"?</p>
-<form action="{% url 'delete_league' item.id %}" method="POST">
+<form action="{% url 'delete_player' item.id %}" method="POST">
     {% csrf_token %}
     <a href = "{% url 'home' %}">Cancel</a>
     <input type = "submit" name="" value="Submit">
