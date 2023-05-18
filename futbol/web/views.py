@@ -1,11 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import Http404, HttpResponse
 from web.models import Liga, Equipo, Jugador, Tabla
 from django.views import generic
+from .forms import *
 
 # Create your views here.
 def index(request):
-    ligas = Liga.objects.all()[:5]
+    ligas = Liga.objects.all()
     dades = {
         'ligas' : ligas,
     }
@@ -13,7 +14,7 @@ def index(request):
     return HttpResponse("<br/>".join(resposta))
 
 def home(request):
-    ligas = Liga.objects.all()[:5]
+    ligas = Liga.objects.all()
     return render(request, "web/index.html", {"ligas": ligas})
 
 def liga(request, liga_id):
@@ -41,3 +42,73 @@ def jugador(request, jugador_id):
 
 def nav_bar(request):
     return render(request, "web/nav_bar.html", {})
+
+def createLeague(request):
+    form = LigaForm()
+    if request.method == "POST":
+        form = LigaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {'form':form}
+    return render(request, "web/league_form.html", context)
+
+def updateLeague(request, pk):
+    liga = Liga.objects.get(id = pk)
+    form = LigaForm(instance=liga)
+
+    if request.method == 'POST':
+        form = LigaForm(request.POST, instance=liga)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    context = {'form':form}
+    return render(request, "web/league_form.html", context)
+
+def createTeam(request):
+    form = TeamForm()
+    if request.method == "POST":
+        form = TeamForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {'form':form}
+    return render(request, "web/team_form.html", context)
+
+
+def updateTeam(request, pk):
+    equipo = Equipo.objects.get(id = pk)
+    form = TeamForm(instance = equipo)
+
+    if request.method == 'POST':
+        form = TeamForm(request.POST, instance = equipo)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    context = {'form':form}
+    return render(request, "web/team_form.html", context)
+
+def createPlayer(request):
+    form = PlayerForm()
+    if request.method == "POST":
+        form = PlayerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+
+    context = {'form':form}
+    return render(request, "web/player_form.html", context)
+
+def updatePlayer(request, pk):
+    jugador = Jugador.objects.get(id = pk)
+    form = PlayerForm(instance = jugador)
+
+    if request.method == 'POST':
+        form = PlayerForm(request.POST, instance = jugador)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    context = {'form':form}
+    return render(request, "web/player_form.html", context)

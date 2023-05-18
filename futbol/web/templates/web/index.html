@@ -4,7 +4,14 @@
 <h2>Elige una liga:</h2>
 <ul>
     {% for liga in ligas %}
-        <li class="elem"><a href="{% url 'Liga' liga.id %}">{{ liga.name }}</a></li>
+        <li class="elem">
+            <a href="{% url 'Liga' liga.id %}">{{ liga.name }}</a>
+            <a href="{% url 'update_league' liga.id %}"><button class="update-btn">Update</button></a>
+            <button class="remove-btn">Remove</button>
+        </li>
     {% endfor %}
+    {% if user.is_authenticated %}
+        <a href="{% url 'create_league' %}"><button class="add-btn">Add NEW element</button></a>
+    {% endif %}
 </ul>
 {% endblock %}

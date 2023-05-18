@@ -6,8 +6,11 @@
 <h3>{{ jugador.name }}</h3>
 
 <ul>
-    <li>Edad: {{ jugador.edad }} </li> 
-    <li>Posicion: {{ jugador.posicion }} </li>
-    <li>Años de experiencia: {{ jugador.años_exp }} </li>
+    <li> Edad: {{ jugador.edad }}</li>
+    <li> Posicion: {{ jugador.posicion }}</li>
+    <li> Años de experiencia: {{ jugador.años_exp }}</li>
+    <a href="{% url 'update_player' jugador.id %}"><button class="update-btn">Update</button></a>
+    <a><button class="update-btn">Remove</button></a>
+    
 </ul>
 {% endblock %}

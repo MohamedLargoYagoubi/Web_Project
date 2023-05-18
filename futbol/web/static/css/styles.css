@@ -50,3 +50,12 @@ h2, h3{
     font-size: 14px;
     padding-left: 30px;
 }
+.addElem > a{
+    color: blue;
+    text-decoration: none;
+}
+.addElem{
+    margin: 3px;
+    list-style: none;
+    font-size: large;
+}

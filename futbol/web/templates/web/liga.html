@@ -5,7 +5,14 @@
 
 <ul>
     {% for equipo in equipos %}
-    <li class="elem"><a href="{% url 'Equipo' equipo.id %}">{{ equipo.name }}</a></li>
+    <li class="elem">
+        <a href="{% url 'Equipo' equipo.id %}">{{ equipo.name }}</a>
+        <a href="{% url 'update_team' equipo.id %}"><button class="update-btn">Update</button></a>
+        <button class="remove-btn">Remove</button>
+    </li>
     {% endfor %}
+    {% if user.is_authenticated %}
+        <a href="{% url 'create_team' %}"><button class="add-btn">Add NEW element</button></a>
+    {% endif %}
 </ul>
 {% endblock %}

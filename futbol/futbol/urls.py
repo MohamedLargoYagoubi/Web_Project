@@ -26,4 +26,11 @@ urlpatterns = [
     path("members/", include("django.contrib.auth.urls")),
     path("members/", include("members.urls")),
     path("", wv.nav_bar, name="nav_bar"),
+    path("create_league/", wv.createLeague, name="create_league"),
+    path("create_team/", wv.createTeam, name="create_team"),
+    path("create_player/", wv.createPlayer, name="create_player"),
+    path("update_league/<str:pk>/", wv.updateLeague, name="update_league"),
+    path("update_team/<str:pk>/", wv.updateTeam, name="update_team"),
+    path("update_player/<str:pk>/", wv.updatePlayer, name="update_player"),
+
 ]
