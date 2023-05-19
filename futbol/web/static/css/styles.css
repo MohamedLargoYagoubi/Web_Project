@@ -54,8 +54,13 @@ h2, h3{
     color: blue;
     text-decoration: none;
 }
+
 .addElem{
     margin: 3px;
     list-style: none;
     font-size: large;
+}
+
+#team{
+    z-index: 999;
 }

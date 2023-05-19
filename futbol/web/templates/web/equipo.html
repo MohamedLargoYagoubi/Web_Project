@@ -1,3 +1,4 @@
+
 {% extends 'web/nav_bar.html' %}
 
 {% block content %}
@@ -9,6 +10,8 @@
                 <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
                     <ion-icon name="happy-outline"></ion-icon>            
                     <span class="sr-only">Fire icon</span>
+                </div>
+                <div id="team">                 
                 </div>
                 <div class="ml-3 text-sm font-mono text-center flex-grow">
                     <a href="{% url 'Jugador' jugador.id %}">{{ jugador.name }}</a>
