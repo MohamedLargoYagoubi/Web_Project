@@ -1,13 +1,16 @@
 {% extends 'web/nav_bar.html' %}
 
 {% block content %}
-<h2>Datos de jugador</h2>
+<div class = "flex justify-center py-10">
+    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <ion-icon name="person-circle-outline" class="w-10 h-10 mb-2 text-gray-500 dark:text-gray-400"></ion-icon>
+        <a>
+            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ jugador.name }}'s stats: </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">AGE: {{ jugador.edad }}</p>
+        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">POSITION: {{ jugador.posicion }}</p>
+        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">YEARS PLAYING SOCCER: {{ jugador.años_exp }}</p>
+    </div>
+</div>
 
-<h3>{{ jugador.name }}</h3>
-
-<ul>
-    <li> Edad: {{ jugador.edad }}</li>
-    <li> Posicion: {{ jugador.posicion }}</li>
-    <li> Años de experiencia: {{ jugador.años_exp }}</li>    
-</ul>
 {% endblock %}

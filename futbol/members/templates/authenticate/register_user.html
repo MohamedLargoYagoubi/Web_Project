@@ -2,17 +2,37 @@
 
 {% block content %}
 {% if form.errors %}
-<p>There was an error with your register</p>
+<div class="flex justify-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+    <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+    <span class="sr-only">Info</span>
+    <div>
+      <span class="font-medium">Error:</span> There was an error in the register phase.
+    </div>
+</div>
 {% endif %}
-
-<h2>Register</h2>
-
-<form class="formStyle" action="{% url 'register' %}" method=POST>
-    {% csrf_token %}
-
-    {{ form.as_p }}
-    
-    <br>
-    <input type="submit" value="Submit">
-</form>
+<div class = "flex justify-center pt-20">
+    <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700 ">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                Register
+            </h1>
+            <form class="space-y-4 md:space-y-6" action="{% url 'register' %}" method=POST>
+                {% csrf_token %}
+                <div>
+                    <label for="id_username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">User name</label>
+                    <input type="text" name="username" maxlength="150" autocapitalize="none" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" autocomplete="username" autofocus="" required="" id="id_username">
+                </div>
+                <div>
+                    <label for="id_password1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password:</label>
+                    <input type="password" name="password1" placeholder="••••••••" autocomplete="new-password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" id="id_password1" aria-autocomplete="list">
+                </div>
+                <div>
+                    <label for="id_password2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password confirmation:</label>
+                    <input type="password" name="password2" placeholder="••••••••" autocomplete="new-password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" id="id_password2">
+                </div>
+                <input type="submit" class="w-full text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
