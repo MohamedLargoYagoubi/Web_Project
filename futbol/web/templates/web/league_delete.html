@@ -1,6 +1,7 @@
 {% extends 'web/nav_bar.html' %}
 
 {% block content %}
+<span vocab="https://schema.org/" typeof="SportsLeague">
 <p>Are you sure to delete "{{item}}"?</p>
 <form action="{% url 'delete_league' item.id %}" method="POST">
     {% csrf_token %}
