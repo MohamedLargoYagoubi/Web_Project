@@ -1,7 +1,7 @@
 {% extends 'web/nav_bar.html' %}
 
 {% block content %}
-<span vocab="https://schema.org/" typeof="athlete">
+<span vocab="https://schema.org/" typeof="Person">
 <form action="" method="POST">
     {% csrf_token %}
     {{form}}

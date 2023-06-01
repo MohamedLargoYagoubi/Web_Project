@@ -2,10 +2,10 @@
 
 {% block content %}
 <span vocab="https://schema.org/" typeof="SportsTeam">
-<p>Are you sure to delete "{{item}}"?</p>
+<p property="legalName">Are you sure to delete "{{item}}"?</p>
 <form action="{% url 'delete_team' item.id %}" method="POST">
     {% csrf_token %}
-    <a href = "{% url 'home' %}">Cancel</a>
+    <a property="url" href = "{% url 'home' %}">Cancel</a>
     <input type = "submit" name="" value="Submit">
 </form>
 
